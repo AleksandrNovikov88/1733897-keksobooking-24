@@ -12,9 +12,8 @@ getRandomIntInclusive();
 
 // С плавающей точкой из переданного диапазона включительно
 
-function getRandomArbitrary(min, max, numberAfterPoint) {
+function getRandomArbitrary(min, max, 2) {
   if (min >= 0, max > min) {
-    let numberAfterPoint = 2;
     return Math.random() * (max - min + 1) + min;
   }
 }
