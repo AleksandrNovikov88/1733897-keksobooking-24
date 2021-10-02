@@ -14,6 +14,7 @@ getRandomIntInclusive();
 
 function getRandomArbitrary(min, max, numberAfterPoint) {
   if (min >= 0, max > min) {
+    let numberAfterPoint = 2;
     return Math.random() * (max - min + 1) + min;
   }
 }
