@@ -1,17 +1,21 @@
-// Получение случайного целого числа в заданном интервале, включительно
+// Функция, возвращающая случайное целое число из переданного диапазона, включительно
 
 function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min; //Максимум и минимум включаются
+  if (min >= 0, max > min) {
+    min = Math.ceil(min);
+    max = Math.round(max);
+    return Math.round(Math.random() * (max - min)) + min;
+  }
 }
 
 getRandomIntInclusive();
 
-// Получение случайного числа в заданном интервале
+// С плавающей точкой из переданного диапазона включительно
 
-function getRandomArbitrary(min, max) {
-  return Math.random() * (max - min) + min;
+function getRandomArbitrary(min, max, numberAfterPoint) {
+  if (min >= 0, max > min) {
+    return Math.random() * (max - min + 1) + min;
+  }
 }
 
 getRandomArbitrary();
