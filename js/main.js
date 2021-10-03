@@ -2,8 +2,6 @@
 
 function getRandomIntInclusive(min, max) {
   if (min >= 0, max > min) {
-    min = Math.ceil(min);
-    max = Math.round(max);
     return Math.round(Math.random() * (max - min)) + min;
   }
 }
@@ -14,7 +12,8 @@ getRandomIntInclusive();
 
 function getRandomArbitrary(min, max) {
   if (min >= 0, max > min) {
-    return Math.random() * (max - min + 1) + min;
+    let num = min + (Math.random() * (max - min));
+    alert(num.toFixed(2));
   }
 }
 
