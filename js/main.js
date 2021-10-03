@@ -12,8 +12,8 @@ getRandomIntInclusive();
 
 function getRandomArbitrary(min, max) {
   if (min >= 0, max > min) {
-    let num = min + (Math.random() * (max - min));
-    alert(num.toFixed(2));
+    const num = min + (Math.random() * (max - min));
+    return (num.toFixed(2));
   }
 }
 
