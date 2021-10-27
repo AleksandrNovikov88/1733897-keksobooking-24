@@ -16,14 +16,10 @@ function getRandomPositiveFloat (a, b, digits) {
 
 // Avatar
 
-function randomAvatarImage(a, b) {
-  const lower = Math.ceil(Math.min(Math.abs(a), Math.abs(b)));
-  const upper = Math.floor(Math.max(Math.abs(a), Math.abs(b)));
-  const result = Math.random() * (upper - lower + 1) + lower;
-  return 'img/avatars/user' + '0' + Math.floor(result) + '.png';
-};
-
-randomAvatarImage(1, 10)
+function randomAvatarImage() {
+  const randomImage = getRandomPositiveInteger(1,10);
+  return 'img/avatars/user' + '0' + randomImage + '.png';
+  }
 
 // Title
 
@@ -40,10 +36,10 @@ const addressLatMax = 35.70000;
 const addressLngMin = 139.70000;
 const addressLngMax = 139.80000;
 
-const addressLat = getRandomPositiveFloat(addressLatMin, addressLatMax, 5);
-const addressLng = getRandomPositiveFloat(addressLngMin, addressLngMax, 5);
 
 const setAddress = (address) => {
+  const addressLat = getRandomPositiveFloat(addressLatMin, addressLatMax, 5);
+  const addressLng = getRandomPositiveFloat(addressLngMin, addressLngMax, 5);
   const first = addressLat;
   const second = addressLng;
   return ${first}, ${second};
