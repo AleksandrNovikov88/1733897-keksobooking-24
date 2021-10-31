@@ -17,7 +17,7 @@ function getRandomPositiveFloat (min, max, digits) {
 
 function randomAvatarImage() {
   const randomImage = getRandomPositiveInteger(1,10);
-  return 'img/avatars/user0' + randomImage + '.png';
+  return `img/avatars/users0${randomImage}.png`;
 }
 
 // Title
