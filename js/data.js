@@ -13,7 +13,6 @@ const createWizardNotice = () => {
       price: randomPrice(),
       type: randomTypePlaces(),
       rooms: randomRooms(),
-      guests: randomGuests(),
       checkin: randomCheckIn(),
       checkout: randomCheckOut(),
       features: randomFeatures(),

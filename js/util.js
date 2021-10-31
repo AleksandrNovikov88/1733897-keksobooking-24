@@ -1,14 +1,14 @@
-function getRandomPositiveInteger (a, b) {
+function getRandomPositiveInteger (min, max) {
 
-  const lower = Math.ceil(Math.min(Math.abs(a), Math.abs(b)));
-  const upper = Math.floor(Math.max(Math.abs(a), Math.abs(b)));
+  const lower = Math.ceil(Math.min(Math.abs(min), Math.abs(max)));
+  const upper = Math.floor(Math.max(Math.abs(min), Math.abs(max)));
   const result = Math.random() * (upper - lower + 1) + lower;
   return Math.floor(result);
 }
 
-function getRandomPositiveFloat (a, b, digits) {
-  const lower = Math.min(Math.abs(a), Math.abs(b));
-  const upper = Math.max(Math.abs(a), Math.abs(b));
+function getRandomPositiveFloat (min, max, digits) {
+  const lower = Math.min(Math.abs(min), Math.abs(max));
+  const upper = Math.max(Math.abs(min), Math.abs(max));
   const result = Math.random() * (upper - lower) + lower;
   return result.toFixed(digits);
 }
@@ -17,7 +17,7 @@ function getRandomPositiveFloat (a, b, digits) {
 
 function randomAvatarImage() {
   const randomImage = getRandomPositiveInteger(1,10);
-  return 'img/avatars/user' + '0' + randomImage + '.png';
+  return 'img/avatars/user0' + randomImage + '.png';
 }
 
 // Title
