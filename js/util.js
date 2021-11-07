@@ -67,6 +67,12 @@ const randomRooms = () => {
   return randomIndex;
 };
 
+// Guests
+const randomGuests = () => {
+  const randomIndex = getRandomPositiveInteger(1, 10);
+  return randomIndex;
+};
+
 // Checkin
 
 const randomCheckIn = () => {
@@ -120,6 +126,6 @@ const randomLocation = () => {
   return location = {lat: locationLat, lng: locationLng};
 };
 
-export {randomAvatarImage, randomTitle, setAddress, randomPrice, randomTypePlaces, randomRooms, randomCheckIn,
+export {randomAvatarImage, randomTitle, setAddress, randomPrice, randomTypePlaces, randomRooms, randomGuests,  randomCheckIn,
   randomCheckOut, randomFeatures, randomDescription, randomPhotos, randomLocation};
 
