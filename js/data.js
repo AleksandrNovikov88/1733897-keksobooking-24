@@ -1,4 +1,4 @@
-import {randomAvatarImage, randomTitle, setAddress, randomPrice, randomTypePlaces, randomRooms, randomCheckIn,
+import {randomAvatarImage, randomTitle, setAddress, randomPrice, randomTypePlaces, randomRooms, randomGuests, randomCheckIn,
   randomCheckOut, randomFeatures, randomDescription, randomPhotos, randomLocation} from './util.js';
 
 const createWizardNotice = () => {
@@ -13,6 +13,7 @@ const createWizardNotice = () => {
       price: randomPrice(),
       type: randomTypePlaces(),
       rooms: randomRooms(),
+      guests: randomGuests(),
       checkin: randomCheckIn(),
       checkout: randomCheckOut(),
       features: randomFeatures(),
