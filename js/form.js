@@ -1,23 +1,52 @@
-const button = document.querySelector('.ad-form__submit');
-const roomNumberInput = document.querySelector('#room_number');
-const roomNumber = roomNumberInput.getElementsByTagName('option');
-const capacityInput = document.querySelector('#capacity');
-const capacity = capacityInput.getElementsByTagName('option');
+const adForm = document.querySelector('.ad-form');
+const titleInput = adForm.querySelector('#title');
+const minlength = 30;
+const maxlength = 100;
+const minlengthInput = Number(titleInput.minlength);
+const maxlengthInput = Number(titleInput.maxlength);
 
 
-const onInputCapacity = function (evt) {
-  if (capacity(evt.target.value) > roomNumber(evt.target.value)) {
-    capacity.setCustomValidity('Выберите соответствующее гостям количество комнат');
-  } else {
-    capacity.setCustomValidity('');
+const titleValid = () => {
+  titleInput.addEventListener('input', function (event) {
+  if (titleInput.textContent = '', minlengthInput < minlength, maxlengthInput > maxlength) {
+
+    }
+  });
+};
+
+const priceInput = adForm.querySelector('#price');
+const maxPrice = 1000000;
+
+const priceValid = () => {
+  if (Number(priceInput.value) > maxPrice) {
+
   }
 };
 
-const onButton = button.addEventListener('submit', function (event) {
-  event.preventDefault();
-});
 
-onInputCapacity();
-onButton();
+const roomsNumberSelect = adForm.querySelector('#room_number');
+const capacitySelect = adForm.querySelector('#capacity');
 
-export {roomNumber, capacity};
+const onRoomsNumberSelect = () => {
+  const seatingCapacityOptions = capacitySelect.querySelectorAll('option');
+  const roomsNumber =  Number(roomsNumberSelect.value);
+  seatingCapacityOptions.forEach((option) => {
+    option.disabled = true;
+  });
+  const roomValues = 0;
+  roomValues[roomsNumber].forEach((seatsAmount) => {
+    seatingCapacityOptions.forEach((option) => {
+      if (Number(option.value) === seatsAmount) {
+        option.disabled = false;
+      }
+    });
+    if (!roomValues[roomsNumber].includes(Number(capacitySelect.value))) {
+      const maxCapacity = roomValues[roomsNumber][roomValues[roomsNumber].length - 1];
+      capacitySelect.value = maxCapacity;
+    }
+  });
+};
+
+titleValid();
+priceValid();
+onRoomsNumberSelect();
