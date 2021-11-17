@@ -23,9 +23,9 @@ function randomAvatarImage() {
 // Title
 
 const randomTitle = () => {
-  const TITLE = ['title','title1','title2','title3','title4', 'title5','title6','title7','title8','title9'];
-  const randomNotice = getRandomPositiveInteger(0,TITLE.length - 1);
-  return TITLE[randomNotice];
+  const TITLES = ['title','title1','title2','title3','title4', 'title5','title6','title7','title8','title9'];
+  const randomNotice = getRandomPositiveInteger(0,TITLES.length - 1);
+  return TITLES[randomNotice];
 };
 
 // Address
@@ -76,17 +76,17 @@ const randomGuests = () => {
 // Checkin
 
 const randomCheckIn = () => {
-  const TIME_IN = ['12:00', '13:00', '14:00'];
-  const randomIndex = getRandomPositiveInteger(0, TIME_IN.length - 1);
-  return TIME_IN[randomIndex];
+  const TIMES_IN = ['12:00', '13:00', '14:00'];
+  const randomIndex = getRandomPositiveInteger(0, TIMES_IN.length - 1);
+  return TIMES_IN[randomIndex];
 };
 
 // Checkout
 
 const randomCheckOut = () => {
-  const TIME_OUT = ['12:00', '13:00', '14:00'];
-  const randomIndex = getRandomPositiveInteger(0, TIME_OUT.length - 1);
-  return TIME_OUT[randomIndex];
+  const TIMES_OUT = ['12:00', '13:00', '14:00'];
+  const randomIndex = getRandomPositiveInteger(0, TIMES_OUT.length - 1);
+  return TIMES_OUT[randomIndex];
 };
 
 // Features
@@ -100,9 +100,9 @@ const randomFeatures = () => {
 // Description
 
 const randomDescription = () => {
-  const DESCRIPTION = ['Просторное', 'Чистое', 'Удобное', 'Светлое', 'С ремонтом', 'Без ремонта'];
-  const randomIndex = getRandomPositiveInteger(0, DESCRIPTION.length - 1);
-  return DESCRIPTION[randomIndex];
+  const DESCRIPTIONS = ['Просторное', 'Чистое', 'Удобное', 'Светлое', 'С ремонтом', 'Без ремонта'];
+  const randomIndex = getRandomPositiveInteger(0, DESCRIPTIONS.length - 1);
+  return DESCRIPTIONS[randomIndex];
 };
 
 // Photos

@@ -37,9 +37,10 @@ priceInput.addEventListener('input', () => {
 const roomsNumberSelect = adForm.querySelector('#room_number');
 const capacitySelect = adForm.querySelector('#capacity');
 
+
 const onRoomsNumberSelect = () => {
   const seatingCapacityOptions = capacitySelect.querySelectorAll('option');
-  const roomsNumber =  Number(roomsNumberSelect.value);
+  const roomsNumber = Number(roomsNumberSelect.value);
   seatingCapacityOptions.forEach((option) => {
     option.disabled = true;
   });
@@ -57,7 +58,7 @@ const onRoomsNumberSelect = () => {
   });
 };
 
-
-onRoomsNumberSelect();
-
-export{onRoomsNumberSelect};
+roomsNumberSelect.addEventListener('change', (evt) => {
+  const roomsNumber = Number(evt.target.value);
+  onRoomsNumberSelect(roomsNumber);
+});
